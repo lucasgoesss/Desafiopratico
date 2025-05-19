@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Member Club</title>
+  <link rel="stylesheet" href="./styles/style.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="Logo"></div>
+      <img src="./styles/assets/Logo.svg" alt="logo-member-club"> 
+      
+      <div class="search-box">
+        <input type="text" id="search-input" placeholder="ID do cartão" />
+        <button id="search-btn"> 
+          <img src="./styles/icons/Icons.svg"> 
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <div class="left-column">
+      <!-- Card do cliente -->
+      <section class="client-card">
+        <img src="./styles/assets/Picture.svg" alt="Foto do Cliente" class="client-photo" />
+        <div class="client-info">
+          <h2 id="client-name">Maria Eduarda Bonamichi</h2>
+          <p>Cliente desde: <span id="start-date">18/09/2023</span></p>
+        </div>
+      </section>
+
+      <!-- Histórico de agendamentos -->
+    <section class="historico">
+      <div class="horarios-agendados">
+        <span class="titulo-historico">HISTÓRICO</span>
+        <span class="quantidade-cortes">7 cortes</span>
+        </div>
+
+        <div class="linha-agendamento">
+          <div class="info-agendamento">
+            <p class="data">29/04/2024</p>
+            <small class="hora">18:30</small>
+          </div>
+          <img src="./styles/icons/Check.svg" alt="Check" class="check-icon" />
+        </div>
+      </section>
+      </div>
+
+
+
+      
+    <div class="right-column">
+      <!-- Histórico de cortes -->
+      <section class="check-card">
+        <div class="header-top">
+          <div class="titles">
+        <h3>Cartão fidelidade</h3>
+        <h4>Ao fazer cortes de cabelo, o décimo sai de graça!</h4>
+        </div>
+        <div class="input-id-container">
+          <!--<label for="card-id-input">ID:</label>-->
+          <input type="text" id="card-id-input" value="ID 124-537-835-230" readonly />
+        </div>
+        </div>
+
+        <ul id="history-list"></ul>
+
+      <div class="stamps" id="stamps-container">
+        <div><img src="./styles/assets/PinCheck.svg" alt="Selo 1" /></div>
+        <div><img src="./styles/assets/PinCheck.svg" alt="Selo 2" /></div>
+        <div><img src="./styles/assets/PinCheck.svg" alt="Selo 3" /></div>
+        <div><img src="./styles/assets/PinCheck.svg" alt="Selo 4" /></div>
+        <div><img src="./styles/assets/PinCheck.svg" alt="Selo 5" /></div>
+        <div><img src="./styles/assets/PinCheck.svg" alt="Selo 6" /></div>
+        <div><img src="./styles/assets/PinCheck.svg" alt="Selo 7" /></div>
+        <div></div>
+        <div></div>
+        <div><img src="./styles/icons/gift-check-card.svg" id="gift-check-card" alt="Selo 10" /></div>
+      </div>
+    </section>
+
+    <!-- Caixa de Progresso -->
+      <section class="progress-box">
+        <div class="progress-info">
+        <span><strong>3</strong> cortes restantes </span>
+
+        <div class="progress-bar-and-count">
+        <div class="progress-bar">
+          <div class="progress-fill"></div>  
+        </div>
+        <p class="progress-count"> 7 de 10</p>
+      </div>
+    </div>
+        <div class="gift-circle">
+          <img src="./styles/icons/Gift-Progress-Box.svg" id="gift-pink"alt="Presente">
+        </div>
+      </section>
+    
+    </main>
+
+    
+    
+    <!-- Histórico de agendamentos
+    <section class="historico">
+      <div class="horarios-agendados">
+        <span class="titulo-historico">HISTÓRICO</span>
+        <span class="quantidade-cortes">7 cortes</span>
+        </div>
+
+        <div class="linha-agendamento">
+          <div class="info-agendamento">
+            <p class="data">29/04/2024</p>
+            <small class="hora">18:30</small>
+          </div>
+          <img src="./styles/icons/Check.svg">
+        </div>
+
+        <div class="stamps" id="stamps-container">
+          Ícones de selos aqui 
+        </div>
+      </section>
+    -->
+
+      
+
+    <!-- Modal de parabéns -->
+    <div class="modal" id="congrats-modal">
+      <div class="modal-content">
+        <h2>Parabéns!</h2>
+        <p>Você ganhou um corte gratuito! 🎉</p>
+        <button id="close-modal">Fechar</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
