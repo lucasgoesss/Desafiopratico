@@ -4,18 +4,19 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Member Club</title>
-  <link rel="stylesheet" href="./styles/style.css" />
+  
+  
 </head>
 <body>
   <div class="container">
     <header>
       <div class="Logo"></div>
-      <img src="./styles/assets/Logo.svg" alt="logo-member-club"> 
+      <img src="./src/assets/Logo.svg" alt="logo-member-club"> 
       
       <div class="search-box">
         <input type="text" id="search-input" placeholder="ID do cartão" />
         <button id="search-btn"> 
-          <img src="./styles/icons/Icons.svg"> 
+          <img src="./src/icons/Icons.svg"> 
         </button>
       </div>
     </header>
@@ -24,7 +25,7 @@
       <div class="left-column">
       <!-- Card do cliente -->
       <section class="client-card">
-        <img src="./styles/assets/Picture.svg" alt="Foto do Cliente" class="client-photo" />
+        <img src="/src/assets/Picture.svg" alt="Foto do Cliente" class="client-photo" />
         <div class="client-info">
           <h2 id="client-name">Maria Eduarda Bonamichi</h2>
           <p>Cliente desde: <span id="start-date">18/09/2023</span></p>
@@ -43,7 +44,7 @@
             <p class="data">29/04/2024</p>
             <small class="hora">18:30</small>
           </div>
-          <img src="./styles/icons/Check.svg" alt="Check" class="check-icon" />
+          <img src="./src/icons/Check.svg" alt="Check" class="check-icon" />
         </div>
       </section>
       </div>
@@ -68,16 +69,16 @@
         <ul id="history-list"></ul>
 
       <div class="stamps" id="stamps-container">
-        <div><img src="./styles/assets/PinCheck.svg" alt="Selo 1" /></div>
-        <div><img src="./styles/assets/PinCheck.svg" alt="Selo 2" /></div>
-        <div><img src="./styles/assets/PinCheck.svg" alt="Selo 3" /></div>
-        <div><img src="./styles/assets/PinCheck.svg" alt="Selo 4" /></div>
-        <div><img src="./styles/assets/PinCheck.svg" alt="Selo 5" /></div>
-        <div><img src="./styles/assets/PinCheck.svg" alt="Selo 6" /></div>
-        <div><img src="./styles/assets/PinCheck.svg" alt="Selo 7" /></div>
+        <div><img src="./src/assets/PinCheck.svg" alt="Selo 1" /></div>
+        <div><img src="./src/assets/PinCheck.svg" alt="Selo 2" /></div>
+        <div><img src="./src/assets/PinCheck.svg" alt="Selo 3" /></div>
+        <div><img src="./src/assets/PinCheck.svg" alt="Selo 4" /></div>
+        <div><img src="./src/assets/PinCheck.svg" alt="Selo 5" /></div>
+        <div><img src="./src/assets/PinCheck.svg" alt="Selo 6" /></div>
+        <div><img src="./src/assets/PinCheck.svg" alt="Selo 7" /></div>
         <div></div>
         <div></div>
-        <div><img src="./styles/icons/gift-check-card.svg" id="gift-check-card" alt="Selo 10" /></div>
+        <div><img src="./src/icons/gift-check-card.svg" id="gift-check-card" alt="Selo 10" /></div>
       </div>
     </section>
 
@@ -94,34 +95,11 @@
       </div>
     </div>
         <div class="gift-circle">
-          <img src="./styles/icons/Gift-Progress-Box.svg" id="gift-pink"alt="Presente">
+          <img src="./src/icons/Gift-Progress-Box.svg" id="gift-pink"alt="Presente">
         </div>
       </section>
     
     </main>
-
-    
-    
-    <!-- Histórico de agendamentos
-    <section class="historico">
-      <div class="horarios-agendados">
-        <span class="titulo-historico">HISTÓRICO</span>
-        <span class="quantidade-cortes">7 cortes</span>
-        </div>
-
-        <div class="linha-agendamento">
-          <div class="info-agendamento">
-            <p class="data">29/04/2024</p>
-            <small class="hora">18:30</small>
-          </div>
-          <img src="./styles/icons/Check.svg">
-        </div>
-
-        <div class="stamps" id="stamps-container">
-          Ícones de selos aqui 
-        </div>
-      </section>
-    -->
 
       
 
@@ -135,6 +113,6 @@
     </div>
   </div>
 
-  <script src="script.js"></script>
+  <script type="module" src="./src/main.js"></script>
 </body>
 </html>
