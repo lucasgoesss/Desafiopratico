@@ -5,7 +5,6 @@ const search_btn = document.getElementById("search-btn");
 
 // Exemplo de função que renderiza os dados do cliente na tela
 function renderClientData(client) {
-  console.log("Cliente encontrado:", client);
 
 // Atualiza informações básicas do cliente
   document.getElementById("client-name").textContent = client.name;
@@ -69,8 +68,7 @@ search_btn.addEventListener("click", async function () {
   }
 });
 
-function renderStamps(data){ 
-  console.log("render cards aqui:",data) 
+function renderStamps(data){  
   const stamps = document.getElementById("stamps-container")
   const numberRestante = document.getElementById("number-restante")
   const fill = document.getElementById("fill")

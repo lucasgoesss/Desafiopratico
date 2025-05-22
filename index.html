@@ -1,117 +1,102 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Member Club</title>
-  
-  
-</head>
-<body>
-  <div class="container">
-    <header>
-      <div class="Logo"></div>
-      <img src="./src/assets/Logo.svg" alt="logo-member-club"> 
-      
-      <div class="search-box">
-        <input type="text" id="search-input" placeholder="ID do cartão" />
-        <button id="search-btn"> 
-          <img src="./src/icons/Icons.svg"> 
-        </button>
-      </div>
-    </header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap" rel="stylesheet">
 
-    <main>
-      <div class="left-column">
-      <!-- Card do cliente -->
-      <section class="client-card">
-        <img src="/src/assets/Picture.svg" alt="Foto do Cliente" class="client-photo" id="client-photo" />
-        <div class="client-info">
-          <h2 id="client-name">Nome do Cliente</h2>
-          <p>Cliente desde: <span id="start-date">00/00/0000</span></p>
+    <title>Member Club</title>
+  </head>
+  <body>
+
+    <div class="response">
+      <header>
+        
+        <div class="logo">
+          <img src="./src/assets/Logo.svg" alt="Logo Member Club" />
         </div>
-      </section>
-
-      <!-- Histórico de agendamentos -->
-    <section class="historico" id="horarios-agendados">
-      <div class="horarios-agendados" >
-        <span class="titulo-historico">HISTÓRICO</span>
-        <span class="quantidade-cortes" id="quantidade-cortes">Cortes</span>
+  
+        <div class="search-box">
+          <input type="text" id="search-input" placeholder="ID do cartão" />
+          <button id="search-btn">
+            <img src="./src/icons/Icons.svg" alt="Buscar" />
+          </button>
         </div>
-
-        <div class="linha-agendamento">
-          <div class="info-agendamento">
-            <p class="data">Data e Horários</p>
-            <small class="hora"></small>
+      </header>
+  
+      <div class="container">
+        <div class="main-content">
+          <!-- Coluna da esquerda -->
+          <div class="left-column">
+            <!-- Card do cliente -->
+            <section class="client-card">
+              <img
+                src="./src/assets/Picture.svg"
+                alt="Foto do Cliente"
+                class="client-photo"
+                id="client-photo"
+              />
+              <div class="client-info">
+                <h2 id="client-name">Nome do Cliente</h2>
+                <p>Cliente desde: <span id="start-date">00/00/0000</span></p>
+              </div>
+            </section>
+  
+            <!-- Histórico de agendamentos -->
+            <section class="historico" id="horarios-agendados">
+              <div class="horarios-agendados">
+                <span class="titulo-historico">HISTÓRICO</span>
+                <span class="quantidade-cortes" id="quantidade-cortes">0 Cortes</span>
+              </div>
+              <div class="linha-agendamento" id="appointment-list">
+                <!-- Dynamic content will be added via JS -->
+              </div>
+            </section>
           </div>
-          
-        </div>
-
-      </section>
-
-      </div>
-
-
-
-      
-    <div class="right-column">
-      <!-- Histórico de cortes -->
-      <section class="check-card">
-        <div class="header-top">
-          <div class="titles">
-        <h3>Cartão fidelidade</h3>
-        <h4>Ao fazer cortes de cabelo, o décimo sai de graça!</h4>
-        </div>
-        <div class="input-id-container">
-          <!--<label for="card-id-input">ID:</label>-->
-          <input type="text" id="card-id-input" value="ID 0" readonly />
-        </div>
-        </div>
-
-        <ul id="history-list"></ul>
-
-      <div class="stamps" id="stamps-container">
-        <!--<div><img src="./src/assets/PinCheck.svg" alt="Selo 1" /></div>
-        <div></div>
-
-        <div><img src="./src/icons/gift-check-card.svg" id="gift-check-card" alt="Selo 10" /></div>
-      -->
-      </div>
-
-    </section>
-
-    <!-- Caixa de Progresso -->
-      <section class="progress-box">
-        <div class="progress-info">
-        <span><strong id="number-restante"></strong> cortes restantes </span>
-
-        <div class="progress-bar-and-count">
-        <div class="progress-bar">
-          <div class="progress-fill" id="fill"></div>  
-        </div>
-        <p class="progress-count" id="progress-count">10 de 10</p>
-      </div>
-    </div>
-        <div class="gift-circle">
-          <img src="./src/icons/Gift-Progress-Box.svg" id="gift-pink"alt="Presente">
-        </div>
-      </section>
-    
-    </main>
-
-      
-
-    <!-- Modal de parabéns -->
-    <div class="modal" id="congrats-modal">
-      <div class="modal-content">
-        <h2>Parabéns!</h2>
-        <p>Você ganhou um corte gratuito! 🎉</p>
-        <button id="close-modal">Fechar</button>
-      </div>
-    </div>
-  </div>
-
   
+          <!-- Coluna da direita -->
+          <div class="right-column">
+            <!-- Cartão Fidelidade -->
+            <section class="check-card">
+              <div class="header-top">
+                <div class="titles">
+                  <h3>Cartão Fidelidade</h3>
+                  <h4>Ao fazer cortes de cabelo, o décimo sai de graça!</h4>
+                </div>
+                <div class="input-id-container">
+                  <input type="text" id="card-id-input" value="ID 0" readonly />
+                </div>
+              </div>
+              <div class="stamps" id="stamps-container">
+                <!-- Stamps will be dynamically generated -->
+              </div>
+            </section>
   
-</body>
+            <!-- Caixa de Progresso -->
+            <section class="progress-box">
+              <div class="progress-info">
+                <span><strong id="number-restante">10</strong> cortes restantes</span>
+                <div class="progress-bar-and-count">
+                  <div class="progress-bar">
+                    <div class="progress-fill" id="fill" style="width: 0%"></div>
+                  </div>
+                  <p class="progress-count" id="progress-count">0 de 10</p>
+                </div>
+              </div>
+              <div class="gift-circle">
+                <img
+                  src="./src/icons/Gift-Progress-Box.svg"
+                  id="gift-pink"
+                  alt="Presente"
+                />
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </body>
 </html>
