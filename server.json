@@ -49,6 +49,24 @@
         "cutsNeeded": 8,
         "cutsRemaining": 3
       }
+    },
+    {
+      "id": "4",
+      "name": "Raposo",
+      "clientSince": "21/05/2025",
+      "appointmentHistory": [
+        {"date": "22/04/2024", "time": "16:00"},
+        {"date": "18/03/2024", "time": "16:30"},
+        {"date": "24/01/2024", "time": "17:45"},
+        {"date": "20/12/2023", "time": "15:15"}
+      ],
+      "loyaltyCard": {
+        "totalCuts": 10,
+        "cutsNeeded": 10,
+        "cutsRemaining": 0
+      }
     }
   ]
 }
+
+

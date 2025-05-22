@@ -33,10 +33,10 @@
       </section>
 
       <!-- Histórico de agendamentos -->
-    <section class="historico">
-      <div class="horarios-agendados">
+    <section class="historico" id="horarios-agendados">
+      <div class="horarios-agendados" >
         <span class="titulo-historico">HISTÓRICO</span>
-        <span class="quantidade-cortes">7 cortes</span>
+        <span class="quantidade-cortes" id="quantidade-cortes">7 cortes</span>
         </div>
 
         <div class="linha-agendamento">
@@ -46,7 +46,9 @@
           </div>
           <img src="./src/icons/Check.svg" alt="Check" class="check-icon" />
         </div>
+
       </section>
+
       </div>
 
 
@@ -62,36 +64,32 @@
         </div>
         <div class="input-id-container">
           <!--<label for="card-id-input">ID:</label>-->
-          <input type="text" id="card-id-input" value="ID 124-537-835-230" readonly />
+          <input type="text" id="card-id-input" value="ID 0" readonly />
         </div>
         </div>
 
         <ul id="history-list"></ul>
 
       <div class="stamps" id="stamps-container">
-        <div><img src="./src/assets/PinCheck.svg" alt="Selo 1" /></div>
-        <div><img src="./src/assets/PinCheck.svg" alt="Selo 2" /></div>
-        <div><img src="./src/assets/PinCheck.svg" alt="Selo 3" /></div>
-        <div><img src="./src/assets/PinCheck.svg" alt="Selo 4" /></div>
-        <div><img src="./src/assets/PinCheck.svg" alt="Selo 5" /></div>
-        <div><img src="./src/assets/PinCheck.svg" alt="Selo 6" /></div>
-        <div><img src="./src/assets/PinCheck.svg" alt="Selo 7" /></div>
+        <!--<div><img src="./src/assets/PinCheck.svg" alt="Selo 1" /></div>
         <div></div>
-        <div></div>
+
         <div><img src="./src/icons/gift-check-card.svg" id="gift-check-card" alt="Selo 10" /></div>
+      -->
       </div>
+
     </section>
 
     <!-- Caixa de Progresso -->
       <section class="progress-box">
         <div class="progress-info">
-        <span><strong>3</strong> cortes restantes </span>
+        <span><strong id="number-restante"></strong> cortes restantes </span>
 
         <div class="progress-bar-and-count">
         <div class="progress-bar">
-          <div class="progress-fill"></div>  
+          <div class="progress-fill" id="fill"></div>  
         </div>
-        <p class="progress-count"> 7 de 10</p>
+        <p class="progress-count" id="progress-count">10 de 10</p>
       </div>
     </div>
         <div class="gift-circle">
@@ -113,6 +111,7 @@
     </div>
   </div>
 
-  <script type="module" src="./src/main.js"></script>
+  
+  
 </body>
 </html>
