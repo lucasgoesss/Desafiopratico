@@ -11,6 +11,7 @@ function renderClientData(client) {
   document.getElementById("client-name").textContent = client.name;
   document.getElementById("start-date").textContent = client.clientSince;
   document.getElementById("quantidade-cortes").textContent = `${client.loyaltyCard.totalCuts} cortes`;
+  document.getElementById("client-photo").src = client.image;
 
   // Atualiza o ID do cartão
   //document.getElementById("card-id-input").value = `ID ${client.id.padStart(3, '0')}//-537-835-230`;
@@ -44,6 +45,7 @@ linhasExistentes.forEach(linha => linha.remove());
 
 search_btn.addEventListener("click", async function () {
   const clientId = search_input.value;
+  search_input.value = ""; // ← limpa o input
   const spanId = document.getElementById("card-id-input")
   spanId.value = `ID ${clientId}`
 

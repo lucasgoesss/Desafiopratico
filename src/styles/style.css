@@ -225,15 +225,6 @@ main {
   align-items: flex-start;
 }
 
-/*.linha-agendamento {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  margin-bottom: 16px;
-  border-bottom: 1px solid #ccc; /* linha separadora 
-  padding-bottom: 10px;
-} */
-
 .info-agendamento {
   display: flex;
   flex-direction: column;
@@ -444,9 +435,6 @@ main {
 
 }
 
-
-
-
 /* Modal */
 .modal {
   position: fixed;
@@ -487,7 +475,7 @@ main {
 
 
 
-/* Responsividade simples */
+/* Responsividade simples 
 @media (max-width: 768px) {
   main {
     grid-template-columns: 1fr;
@@ -505,3 +493,4 @@ main {
     width: 100%;
   }
 } 
+*/
