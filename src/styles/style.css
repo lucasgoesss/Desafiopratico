@@ -244,20 +244,21 @@ main {
 
 
 .header-top {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  width: 100%;
-  margin-top: 32px;
-}
+    flex-direction: row; /* Mantém horizontal no mobile */
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 16px;
+  }
 
 .check-card .titles h3 {
+  flex: 1;
   margin: 0 0 4px 0;
   font-size: var(--heading---title--md);
   font-weight: 600;
 }
 
 .check-card .titles h4 {
+  flex: 1;
   margin: 0;
   font-size: var(--heading---subtitle--md);
   font-weight: 400;
@@ -267,7 +268,8 @@ main {
 .input-id-container {
   display: flex;
   flex-direction: flex-end;
-  align-items: center;
+  align-items: flex-start;
+  flex-shrink: 0;
   justify-content: flex-end;
   margin-top: 0px;
   
@@ -444,53 +446,87 @@ main {
 @media (max-width: 768px) {
 
   
+  /*.header-top {
+    flex-direction: column;
+    gap: 12px;
+    align-items: stretch;
+  } */
 
+
+  
   .container {
     width: 100%;
-    padding: 0; /* remove o padding */
-    border: none; /* remove a borda */
-    margin: 0; /* remove a margem */
-  }
-
-  .main-content {
-    width: 100%;
-    padding: 0; /* remove o padding */
-    border: none; /* remove a borda */
-    margin: 0; /* remove a margem */
-  }
-  .search-box {
-    width: 80%; /* largura ajustada */
-    margin: 0; /* remove a margem */
-    padding: 0; /* remove o padding */
+    padding: 0 16px; /* Adiciona um pequeno respiro lateral */
     margin: 0 auto;
   }
-  
+
   .main-content {
     flex-direction: column;
-  }
-
-  .left-column {
+    padding: 0;
+    margin: 0;
     width: 100%;
-    gap: 16px;
   }
 
+  .search-box {
+    width: 100%;
+    margin: 0 auto 16px auto;
+  }
+
+  main {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .left-column,
   .right-column {
     width: 100%;
-    height: auto; /* altura automática */
-    gap: 16px;
+    height: auto;
   }
 
-  .check-card {
-    width: 100%; /* largura ajustada */
-    height: auto; /* altura automática */
-  }
-
-  .historico {
-    width: 100%; /* largura ajustada */
-    height: auto; /* altura automática */
+  .check-card,
+  .historico,
+  .progress-box {
+    width: 100%;
+    height: auto;
   }
 
   .progress-bar {
-    width: 100%; /* largura ajustada */
+    width: 100%;
   }
-} 
+
+  .check-card .stamps {
+    grid-template-columns: repeat(auto-fill, minmax(70px, 1fr));
+    grid-template-rows: none;
+    width: 100%;
+    height: auto;
+    gap: 12px;
+  }
+
+  .check-card .stamps div {
+    width: 70px;
+    height: 70px;
+  }
+
+  .gift-circle {
+    width: 56px;
+    height: 56px;
+  }
+
+  .gift-circle img {
+    width: 40px;
+    height: 40px;
+    padding: 8px;
+  }
+
+  .progress-info span {
+    font-size: 18px;
+  }
+
+  .input-id-container {
+    justify-content: center;
+    margin-bottom: 12px;
+  }
+
+}
+
