@@ -1,4 +1,4 @@
-💇‍♂️ Membro Club - Sistema de Fidelidade para Barbearia
+💇‍♂️ Member Club - Sistema de Fidelidade para Barbearia.
 Um sistema web para gerenciamento de cartão fidelidade de clientes de barbearia, desenvolvido com HTML, CSS e JavaScript vanilla.
 
 📋 Sobre o Projeto
